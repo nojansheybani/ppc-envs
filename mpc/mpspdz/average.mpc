@@ -1,0 +1,18 @@
+import ml
+import util
+import math
+import sys
+
+p0_sims = sint.Array(10000)
+p0_sims.assign_all(sint(1))
+
+p1_sims = sint.Array(10000)
+p1_sims.assign_all(sint(1))
+
+sim_sum = p0_sims + p1_sims
+
+sim_tracker = sim_sum / 2
+
+max = ml.argmax(sim_tracker)
+
+print_ln("max: %s", max.reveal())
